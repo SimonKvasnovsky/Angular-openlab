@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Item  } from '../items'
-import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
 import { ItemService } from '../item.service';
+import { ITEMS2 } from '../unusedMock-items';
 
 @Component({
   selector: 'app-items',
@@ -10,9 +10,10 @@ import { ItemService } from '../item.service';
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent implements OnInit {
+  items = ITEMS2;
 
   selectedItem?: Item;
-  items: Item[] = [];
+  
   constructor(private itemService: ItemService, private messageService: MessageService) { }
 
   ngOnInit(): void {
