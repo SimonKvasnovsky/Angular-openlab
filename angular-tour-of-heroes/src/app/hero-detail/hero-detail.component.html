@@ -5,7 +5,8 @@
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
   </div>
-  <button (click)="goBack()">go back</button>
+  <button (click)="goBack()">Go back</button>
+  <a routerLink="/items/{{hero.id}}"> <button class="Free"> Free items</button></a>
 
   <div>
     <ul>

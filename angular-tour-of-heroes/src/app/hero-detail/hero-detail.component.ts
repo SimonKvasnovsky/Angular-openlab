@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { HeroService } from '../hero.service';
+import { ITEMS2 } from '../unusedMock-items';
 
 @Component({
   selector: 'app-hero-detail',
