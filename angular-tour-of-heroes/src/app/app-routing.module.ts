@@ -4,13 +4,14 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { ItemsComponent } from './items/items.component';
-
+import { ITEMS2 } from './mock-items';
 const routes: Routes = [
   { path: 'heroes', component: HeroesComponent},
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'detail/:id', component: HeroDetailComponent },
-  { path: "items/:id", component: ItemsComponent}
+  { path: "items/:id", component: ItemsComponent},
+  
 ];
 
 

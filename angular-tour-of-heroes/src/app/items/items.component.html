@@ -1,20 +1,19 @@
+
 <h2>My Items</h2>
 <h3>Choose one item you would like to buy</h3>
-<button class="buyitems"(click)="buyItem()">Buy Items</button>
+<button class="buyitem"(click)="buyItem()">Buy Item</button>
+sellItem
 <ul class="items">
 
 
-<li *ngFor="let item of items"
-
-[class.selected]="item === selectedItem"
-(click)="onSelect(item)">
-
-
+<li *ngFor="let item of items"></li>
+<a routerLink="/detail/{{item.id}}">
     <span class="badge">{{item.id}}</span> 
     {{item.name}}
        <span class="price">{{item.price}}</span> 
-</li>
-</ul>
+</a> 
+
+
 
 
 
