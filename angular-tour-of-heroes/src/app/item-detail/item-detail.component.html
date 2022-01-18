@@ -1,7 +1,8 @@
 
 <div *ngIf="item">
-
+ 
   <h2>{{item.name | uppercase}} Details</h2>
+  <button *ngIf = "!item.isAvailable" (click)="callParentDelete()">Sell Item</button>
   <div><span>id: </span>{{item.id}}</div>
   <div><span>price: </span>{{item.price}}</div>
   <div>
@@ -14,4 +15,5 @@
   </div>
 
 </div>
+
 

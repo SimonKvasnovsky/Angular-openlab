@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Item  } from '../items'
 import { MessageService } from '../message.service';
 import { ItemService } from '../item.service';
-import { ITEMS2 } from '../unusedMock-items';
+import { ITEMS2 } from '../mock-items';
 import { HeroService } from '../hero.service';
 import { ActivatedRoute } from '@angular/router';
 import { Hero } from '../hero';
@@ -47,7 +47,6 @@ export class ItemsComponent implements OnInit {
         this.hero.money -= this.selectedItem.price;
         this.hero.items.push(this.selectedItem);
       }
-    
    
     }
   }
@@ -56,5 +55,8 @@ export class ItemsComponent implements OnInit {
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
   }
-  
+  sellItem(): void{
+    
+  }
 }
+

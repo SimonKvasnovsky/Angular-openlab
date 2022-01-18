@@ -22,4 +22,6 @@ label {
     color: #ccc;
     cursor: auto;
   }
-  
+  div {
+    font-size: large;
+  }

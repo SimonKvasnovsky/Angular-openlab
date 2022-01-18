@@ -5,13 +5,13 @@
 sellItem
 <ul class="items">
 
-
-<li *ngFor="let item of items"></li>
+<li *ngFor="let item of items">
 <a routerLink="/detail/{{item.id}}">
     <span class="badge">{{item.id}}</span> 
     {{item.name}}
        <span class="price">{{item.price}}</span> 
 </a> 
+</li>
 
 
 

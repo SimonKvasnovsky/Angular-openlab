@@ -60,7 +60,7 @@
     margin-right: .8em;
     border-radius: 4px 4px;
   }
-  .buyitems {
+  .buyitem {
     color: #333;
     background-color: #eee;
     margin-bottom: 12px;
@@ -69,10 +69,11 @@
     font-size: 1rem;
     margin-left: 4px;;
   }
-  .buyitems:hover {
+  .buyitem:hover {
     color: white;
     background-color: #42545C;
   }
+ 
   
 
   input {

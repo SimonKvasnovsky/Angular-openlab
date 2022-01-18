@@ -1,9 +1,8 @@
 import { Item } from './items';
-import { ITEMS } from './mock-items';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
-import { ITEMS2 } from './unusedMock-items';
+import { ITEMS2 } from './mock-items';
 @Injectable({
   providedIn: 'root'
 })

@@ -4,16 +4,14 @@
   <div>
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
+    <div><span>money: </span>{{hero.money}}</div>
   </div>
   <button (click)="goBack()">Go back</button>
   <a routerLink="/items/{{hero.id}}"> <button class="Free"> Free items</button></a>
 
   <div>
-    <ul>
-        <li *ngFor="let item of hero.items">
-            <app-item-detail [item]="item"></app-item-detail>
-        </li>
-    </ul>
+      <div class="items" *ngFor="let item of hero.items">
+          <app-item-detail [item]="item" (deleteEvent)="sellItem(item)"></app-item-detail>
 </div>
 
 </div>

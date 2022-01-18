@@ -4,7 +4,10 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { HeroService } from '../hero.service';
-import { ITEMS2 } from '../unusedMock-items';
+import { ITEMS, ITEMS2 } from '../mock-items';
+import { ReplaySubject } from 'rxjs';
+import { Item } from '../items';
+
 
 @Component({
   selector: 'app-hero-detail',
@@ -12,7 +15,8 @@ import { ITEMS2 } from '../unusedMock-items';
   styleUrls: [ './hero-detail.component.css' ]
 })
 export class HeroDetailComponent implements OnInit {
-  hero: Hero | undefined;
+  @Input() hero!: Hero;
+  itemsFree = ITEMS2;
   
   constructor(
     private route: ActivatedRoute,
@@ -33,4 +37,22 @@ export class HeroDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+  click():void{}
+  
+  sellItem(item: Item): void {
+    if(item.isAvailable == false){
+      this.hero.money += item.price;
+      item.isAvailable = true;
+      this.itemsFree.push(item);
+      this.deleteMsg(item);
+    }
+  }
+
+  deleteMsg(item:Item) {
+    const index: number = this.hero.items.indexOf(item);
+    if (index !== -1) {
+        this.hero.items.splice(index, 1);
+    }
+  }
+
 }
